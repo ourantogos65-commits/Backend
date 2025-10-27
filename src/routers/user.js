@@ -4,9 +4,9 @@ import { CreateUser, deleteUserById, getUsers, UpdateById } from "../controllers
  export const useRouter=Router()
 
  useRouter
- .get("/",getUsers)
- .post("/",CreateUser)
- .put ("/:id" , UpdateById)
- .delete("/:id",deleteUserById)
+ .get("/student",getUsers)
+ .post("/student",CreateUser)
+//  .put ("/:id" , UpdateById)
+ .delete("student/:id",deleteUserById)
 
 
