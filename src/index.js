@@ -5,7 +5,8 @@ import chalk from "chalk";
 import bodyParser from "body-parser";
 import { configDotenv } from "dotenv";
 import { connectDB } from "../db.js";
-import { useRouter } from "./routers/user.js";
+import { FoodRouter } from "./routers/foodCategoryRoute.js";
+
 
 
 
@@ -16,8 +17,8 @@ const app = express();
 
 app.use(bodyParser.json())
 
-app.use("/student",useRouter)
-
+// app.use("/student",useRouter)
+app.use("/food",FoodRouter)
 
 
 app.listen(PORT, () => {
